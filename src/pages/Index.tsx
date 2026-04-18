@@ -1,16 +1,48 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useReveal } from "@/hooks/use-reveal";
+import Nav from "@/components/kaspaflow/Nav";
+import Hero from "@/components/kaspaflow/Hero";
+import Problem from "@/components/kaspaflow/Problem";
+import Solution from "@/components/kaspaflow/Solution";
+import HowItWorks from "@/components/kaspaflow/HowItWorks";
+import Pricing from "@/components/kaspaflow/Pricing";
+import Faq from "@/components/kaspaflow/Faq";
+import FinalCta from "@/components/kaspaflow/FinalCta";
+import Footer from "@/components/kaspaflow/Footer";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
+const Index = () => {
+  useReveal();
+
   return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
+    <div className="min-h-screen bg-background text-foreground">
+      <Nav />
+      <main>
+        <Hero />
+        <Problem />
+        <Solution />
+        <HowItWorks />
+        <Pricing />
+        <Faq />
+        <FinalCta />
+      </main>
+      <Footer />
+
+      {/* JSON-LD: Organization */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "KaspaFlow",
+            url: "https://kaspaflow.com",
+            description:
+              "AI automation consultancy for UK recruitment agencies. CV screening, candidate outreach, and ATS automation.",
+            areaServed: "United Kingdom",
+          }),
+        }}
+      />
     </div>
   );
 };
-
-const Index = PlaceholderIndex;
 
 export default Index;
