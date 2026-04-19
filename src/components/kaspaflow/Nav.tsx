@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { CAL_URL } from "@/lib/kaspaflow";
-import icon from "@/assets/kaspaflow-icon.png";
+import icon from "@/assets/kaspaflow-icon.svg";
 
 const links = [
   { href: "#how", label: "How It Works" },
