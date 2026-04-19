@@ -18,7 +18,7 @@ const Footer = () => {
           </a>
         </nav>
 
-        <p className="text-xs text-muted-foreground">© 2026</p>
+        <p className="text-xs text-muted-foreground">© 2026 KaspaFlow Ltd.</p>
       </div>
     </footer>
   );

@@ -15,8 +15,8 @@ const Hero = () => {
             <span className="text-primary">15+ hours</span> back every week
           </h1>
           <p className="reveal mx-auto mt-7 max-w-2xl text-balance text-base text-muted-foreground md:text-lg">
-            KaspaFlow builds custom automation for UK recruitment agencies — candidate sourcing,
-            CV screening, and personalised outreach that runs while your team sleeps.
+            We build and deploy custom AI workflows for UK recruitment agencies — so your
+            consultants spend time placing candidates, not screening CVs or writing outreach.
           </p>
 
           <div className="reveal mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -32,7 +32,7 @@ const Hero = () => {
           </div>
 
           <p className="reveal mt-10 text-xs text-muted-foreground">
-            Built for UK recruitment firms using Bullhorn, Vincere, JobAdder, and custom ATS setups
+            Integrates with Bullhorn, Vincere, JobAdder, and custom ATS setups
           </p>
         </div>
       </div>
