@@ -1,4 +1,5 @@
 import { Play } from "lucide-react";
+import { SHOW_LOOM_EMBEDS } from "@/lib/kaspaflow";
 
 const cards = [
   {
@@ -37,17 +38,19 @@ const Solution = () => {
               <p className="mt-2 text-primary">{c.sub}</p>
               <p className="mt-5 text-sm leading-relaxed text-muted-foreground">{c.body}</p>
 
-              {/* Loom video placeholder */}
-              <div className="mt-8 aspect-video overflow-hidden rounded-lg border border-border bg-background">
-                <div className="flex h-full w-full items-center justify-center">
-                  <div className="flex flex-col items-center gap-3 text-muted-foreground">
-                    <span className="flex h-12 w-12 items-center justify-center rounded-full border border-border-strong">
-                      <Play className="h-4 w-4 fill-current" aria-hidden />
-                    </span>
-                    <span className="text-xs uppercase tracking-[0.18em]">Loom walkthrough</span>
+              {/* Loom video placeholder — toggle SHOW_LOOM_EMBEDS in src/lib/kaspaflow.ts to re-enable once real embed URLs are available */}
+              {SHOW_LOOM_EMBEDS && (
+                <div className="mt-8 aspect-video overflow-hidden rounded-lg border border-border bg-background">
+                  <div className="flex h-full w-full items-center justify-center">
+                    <div className="flex flex-col items-center gap-3 text-muted-foreground">
+                      <span className="flex h-12 w-12 items-center justify-center rounded-full border border-border-strong">
+                        <Play className="h-4 w-4 fill-current" aria-hidden />
+                      </span>
+                      <span className="text-xs uppercase tracking-[0.18em]">Loom walkthrough</span>
+                    </div>
                   </div>
                 </div>
-              </div>
+              )}
             </article>
           ))}
         </div>
