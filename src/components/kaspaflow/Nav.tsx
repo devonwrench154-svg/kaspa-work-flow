@@ -27,19 +27,22 @@ const Nav = () => {
           : "border-b border-transparent"
       }`}
     >
-      <nav className="container-tight flex h-20 items-center justify-between" aria-label="Primary">
-        <a href="#top" aria-label="KaspaFlow — home" className="flex items-center gap-3">
+      <nav className="container-tight flex h-16 items-center justify-between" aria-label="Primary">
+        <a
+          href="#top"
+          aria-label="KaspaFlow — home"
+          className="flex items-center"
+          style={{ gap: "10px" }}
+        >
           <img
             src={icon}
             alt=""
             aria-hidden="true"
-            className="h-11 w-11 rounded-[10px]"
+            className="h-8 w-8"
             loading="eager"
             decoding="async"
           />
-          <span className="font-serif-display text-3xl leading-none text-foreground">
-            KaspaFlow
-          </span>
+          <span className="text-lg font-medium text-white">KaspaFlow</span>
         </a>
 
         <div className="hidden items-center gap-8 md:flex">
