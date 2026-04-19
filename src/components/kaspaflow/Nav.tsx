@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { CAL_URL } from "@/lib/kaspaflow";
-import wordmark from "@/assets/kaspaflow-wordmark.png";
+import icon from "@/assets/kaspaflow-icon.png";
 
 const links = [
   { href: "#how", label: "How It Works" },
@@ -27,15 +27,19 @@ const Nav = () => {
           : "border-b border-transparent"
       }`}
     >
-      <nav className="container-tight flex h-16 items-center justify-between" aria-label="Primary">
-        <a href="#top" aria-label="KaspaFlow — home" className="flex items-center">
+      <nav className="container-tight flex h-20 items-center justify-between" aria-label="Primary">
+        <a href="#top" aria-label="KaspaFlow — home" className="flex items-center gap-3">
           <img
-            src={wordmark}
-            alt="KaspaFlow"
-            className="h-8 w-auto"
+            src={icon}
+            alt=""
+            aria-hidden="true"
+            className="h-11 w-11 rounded-[10px]"
             loading="eager"
             decoding="async"
           />
+          <span className="font-serif-display text-3xl leading-none text-foreground">
+            KaspaFlow
+          </span>
         </a>
 
         <div className="hidden items-center gap-8 md:flex">
