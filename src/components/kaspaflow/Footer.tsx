@@ -11,14 +11,14 @@ const Footer = () => {
         </div>
 
         <nav className="flex items-center gap-8 text-sm text-muted-foreground" aria-label="Footer">
-          <a href="#" className="transition-colors hover:text-foreground">Privacy</a>
-          <a href="#" className="transition-colors hover:text-foreground">Terms</a>
+          <a href="/privacy" className="transition-colors hover:text-foreground">Privacy</a>
+          <a href="/privacy" className="transition-colors hover:text-foreground">Terms</a>
           <a href="mailto:hello@kaspaflow.com" className="transition-colors hover:text-foreground">
             Contact
           </a>
         </nav>
 
-        <p className="text-xs text-muted-foreground">© 2026 KaspaFlow Ltd.</p>
+        <p className="text-xs text-muted-foreground">© 2026 KaspaFlow.</p>
       </div>
     </footer>
   );
