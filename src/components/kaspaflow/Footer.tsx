@@ -1,4 +1,5 @@
 const Footer = () => {
+  const year = new Date().getFullYear();
   return (
     <footer className="border-t border-border py-12">
       <div className="container-tight flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
@@ -11,14 +12,14 @@ const Footer = () => {
         </div>
 
         <nav className="flex items-center gap-8 text-sm text-muted-foreground" aria-label="Footer">
-          <a href="/privacy" className="transition-colors hover:text-foreground">Privacy</a>
-          <a href="/privacy" className="transition-colors hover:text-foreground">Terms</a>
+          <a href="/privacy" className="transition-colors hover:text-foreground">Privacy Policy</a>
+          <a href="/terms" className="transition-colors hover:text-foreground">Terms of Service</a>
           <a href="mailto:hello@kaspaflow.com" className="transition-colors hover:text-foreground">
             Contact
           </a>
         </nav>
 
-        <p className="text-xs text-muted-foreground">© 2026 KaspaFlow.</p>
+        <p className="text-xs text-muted-foreground">© {year} KaspaFlow. All rights reserved.</p>
       </div>
     </footer>
   );
