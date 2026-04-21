@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { useReveal } from "@/hooks/use-reveal";
 import Nav from "@/components/kaspaflow/Nav";
 import Hero from "@/components/kaspaflow/Hero";
@@ -11,6 +13,18 @@ import Footer from "@/components/kaspaflow/Footer";
 
 const Index = () => {
   useReveal();
+  const location = useLocation();
+
+  useEffect(() => {
+    if (!location.hash) return;
+    const id = location.hash.slice(1);
+    // Wait a tick so sections are mounted
+    const t = window.setTimeout(() => {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 50);
+    return () => window.clearTimeout(t);
+  }, [location.hash]);
 
   return (
     <div className="min-h-screen bg-background text-foreground">
