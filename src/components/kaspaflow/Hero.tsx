@@ -14,9 +14,10 @@ const Hero = () => {
             AI systems that give recruitment consultants{" "}
             <span className="text-primary">15+ hours</span> back every week
           </h1>
-          <p className="reveal mx-auto mt-7 max-w-2xl text-balance text-base text-muted-foreground md:text-lg">
-            We build and deploy custom AI workflows for UK recruitment agencies — so your
-            consultants spend time placing candidates, not screening CVs or writing outreach.
+          <p className="reveal mx-auto mt-7 max-w-[600px] text-balance text-base font-light text-muted-foreground md:text-lg">
+            Built for UK recruitment agencies. Two flagship AI systems that give your
+            consultants 15+ hours back every week — so they can focus on placing candidates,
+            not chasing them.
           </p>
 
           <div className="reveal mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -31,8 +32,9 @@ const Hero = () => {
             </a>
           </div>
 
-          <p className="reveal mt-10 text-xs text-muted-foreground">
-            Integrates with Bullhorn, Vincere, JobAdder, and custom ATS setups
+          <p className="reveal mx-auto mt-6 max-w-xl text-center text-xs text-muted-foreground">
+            Purpose-built for 10–50 person UK recruitment agencies. First 3 clients onboarded at
+            founder pricing.
           </p>
         </div>
       </div>
