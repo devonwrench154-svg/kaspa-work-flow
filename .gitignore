@@ -1,0 +1,25 @@
+# env / secrets
+.env
+.env.*
+*.env
+config.local.*
+
+# if SHEETS_ENDPOINT is ever moved to a local config file
+sheets-config.js
+config.js
+
+# uploads directory (user-submitted files)
+uploads/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# editors
+.vscode/
+.idea/
+
+# node (if a build step is added later)
+node_modules/
+dist/
