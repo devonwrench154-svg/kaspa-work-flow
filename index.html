@@ -1,32 +1,1401 @@
 <!doctype html>
-<html lang="en" class="dark">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>KaspaFlow — AI Automation for UK Recruitment Agencies</title>
-    <meta name="description" content="We build AI systems that save recruitment consultants 15+ hours per week. CV screening, candidate outreach, and ATS automation for UK agencies.">
-    <meta name="author" content="KaspaFlow" />
-    <link rel="canonical" href="/" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Kaspaflow — Automation for Recruitment Firms</title>
+<meta name="description" content="A connected operating system for UK recruitment firms. Purpose-built modules, one hub — screening, qualification, intake, proposals, reporting and outreach.">
+<link rel="canonical" href="https://kaspaflow.co.uk/">
+<meta property="og:title" content="Kaspaflow — Automation for Recruitment Firms">
+<meta property="og:description" content="A connected operating system for UK recruitment firms. Licence the modules; we host them on UK infrastructure at no additional cost.">
+<meta property="og:url" content="https://kaspaflow.co.uk/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23003A70'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='20' font-style='italic' fill='white' text-anchor='middle'%3EK%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Kaspaflow Ltd",
+  "url": "https://kaspaflow.co.uk/",
+  "email": "Dev@kaspaflow.co.uk",
+  "address": { "@type": "PostalAddress", "addressLocality": "London", "addressCountry": "GB" },
+  "foundingDate": "2023"
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,500;1,8..60,400&family=Inter+Tight:wght@400;500;600&display=swap">
+<script type="text/javascript">
+(function(C,A,L){let p=function(a,ar){a.q.push(ar)};let d=C.document;C.Cal=C.Cal||function(){let cal=C.Cal;let ar=arguments;if(!cal.loaded){cal.ns={};cal.q=cal.q||[];d.head.appendChild(d.createElement("script")).src=A;cal.loaded=true}if(ar[0]===L){const api=function(){p(api,arguments)};const namespace=ar[1];api.q=[];if(typeof namespace==="string"){cal.ns[namespace]=cal.ns[namespace]||api;p(cal.ns[namespace],ar);p(cal,[L,namespace,ar[2]])}else{p(cal,ar)}return}p(cal,ar)};})(window,"https://app.cal.com/embed/embed.js","init");
+Cal("init",{origin:"https://cal.com"});
+</script>
+<style>
+:root {
+  --bg: #FAFAF7;
+  --bg-2: #F2F1EC;
+  --bg-3: #E8E6DF;
+  --ink: #18181A;
+  --ink-2: #3A3A3D;
+  --ink-3: #595959;
+  --ink-4: #A3A3A3;
+  --hair: #D7D5CE;
+  --hair-2: #E5E3DC;
+  --accent: #003A70;
+  --accent-bright: #0A66C2;
+  --accent-soft: #E6EEF6;
+  --serif: "Source Serif 4", "Iowan Old Style", Georgia, "Times New Roman", serif;
+  --sans: "Inter Tight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --maxw: 1280px;
+  --gut: clamp(20px, 4vw, 56px);
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+a { color: inherit; text-decoration: none; }
+img, svg { display: block; max-width: 100%; }
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gut); }
+.hairline { height: 1px; background: var(--hair); width: 100%; }
+.eyebrow {
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  font-weight: 500;
+}
+.eyebrow .dot { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); margin-right: 10px; vertical-align: 2px; }
+h1, h2, h3, h4 { font-family: var(--serif); font-weight: 400; letter-spacing: -0.012em; margin: 0; color: var(--ink); }
+h1 { font-size: clamp(42px, 6vw, 88px); line-height: 1.02; letter-spacing: -0.022em; font-weight: 300; }
+h1 em { font-style: italic; font-weight: 400; color: var(--accent); }
+h2 { font-size: clamp(30px, 4vw, 52px); line-height: 1.06; letter-spacing: -0.018em; }
+h2 em { font-style: italic; color: var(--accent); }
+h3 { font-size: clamp(20px, 2vw, 26px); line-height: 1.15; }
+p { margin: 0; }
+.lede { font-family: var(--serif); font-size: clamp(17px, 1.5vw, 21px); line-height: 1.5; color: var(--ink-2); font-weight: 400; }
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+/* scroll progress */
+.scroll-progress {
+  position: fixed; top: 0; left: 0; height: 2px; width: 0%;
+  background: var(--accent-bright); z-index: 200;
+  transition: width 0.1s linear;
+}
 
-    
-    
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta property="og:title" content="KaspaFlow — AI Automation for UK Recruitment Agencies">
-  <meta name="twitter:title" content="KaspaFlow — AI Automation for UK Recruitment Agencies">
-  <meta property="og:description" content="We build AI systems that save recruitment consultants 15+ hours per week. CV screening, candidate outreach, and ATS automation for UK agencies.">
-  <meta name="twitter:description" content="We build AI systems that save recruitment consultants 15+ hours per week. CV screening, candidate outreach, and ATS automation for UK agencies.">
-  <meta property="og:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/2cb7b26a-0b21-4986-8c3a-f0544e5df2f9/id-preview-b2f72f0f--3aecedb6-6992-4600-8728-50e1eacc5358.lovable.app-1776534374883.png">
-  <meta name="twitter:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/2cb7b26a-0b21-4986-8c3a-f0544e5df2f9/id-preview-b2f72f0f--3aecedb6-6992-4600-8728-50e1eacc5358.lovable.app-1776534374883.png">
+/* nav */
+.nav {
+  position: sticky; top: 0; z-index: 50;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: saturate(140%) blur(12px);
+  -webkit-backdrop-filter: saturate(140%) blur(12px);
+  border-bottom: 1px solid var(--hair-2);
+}
+.nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; gap: 20px; }
+.brand { display: flex; align-items: center; gap: 10px; font-family: var(--serif); font-size: 22px; letter-spacing: -0.01em; cursor: pointer; }
+.brand-mark { width: 26px; height: 26px; flex-shrink: 0; }
+.brand b { font-weight: 500; }
+.brand i { font-style: italic; color: var(--accent); font-weight: 400; }
+.nav-links { display: flex; gap: 24px; align-items: center; }
+.nav-links a { font-size: 13.5px; color: var(--ink-2); cursor: pointer; transition: color .2s ease; white-space: nowrap; }
+.nav-links a:hover { color: var(--accent); }
+.nav-right { display: flex; align-items: center; gap: 12px; }
+.nav-cta { display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; border: 1px solid var(--accent); border-radius: 999px; font-size: 13px; cursor: pointer; transition: all .2s ease; background: var(--accent); color: #fff; white-space: nowrap; line-height: 1; font-family: var(--sans); }
+.nav-cta:hover { background: var(--accent-bright); border-color: var(--accent-bright); }
+.nav-cta .arrow { transition: transform .25s ease; }
+.nav-cta:hover .arrow { transform: translateX(3px); }
+.hamburger { display: none; flex-direction: column; gap: 5px; width: 36px; height: 36px; border: 1px solid var(--hair); border-radius: 6px; background: transparent; cursor: pointer; align-items: center; justify-content: center; }
+.hamburger span { display: block; width: 16px; height: 1.5px; background: var(--ink); border-radius: 2px; transition: all .25s ease; }
+.hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+/* mobile menu overlay */
+.mobile-overlay {
+  position: fixed; inset: 0; z-index: 49;
+  background: var(--bg);
+  display: flex; flex-direction: column;
+  padding: 80px var(--gut) 40px;
+  transform: translateX(100%);
+  transition: transform .3s ease;
+  border-left: 1px solid var(--hair-2);
+}
+.mobile-overlay.open { transform: translateX(0); }
+.mobile-nav-links { display: flex; flex-direction: column; gap: 0; border-top: 1px solid var(--hair-2); margin-top: 24px; }
+.mobile-nav-links a {
+  font-family: var(--serif); font-size: 28px; font-weight: 300;
+  padding: 20px 0; border-bottom: 1px solid var(--hair-2);
+  color: var(--ink); cursor: pointer; display: flex; align-items: center; justify-content: space-between;
+  transition: color .2s ease;
+}
+.mobile-nav-links a:hover { color: var(--accent); }
+.mobile-nav-links a em { font-style: italic; font-size: 13px; color: var(--ink-4); font-family: var(--sans); letter-spacing: 0.1em; }
+.mobile-cta-wrap { margin-top: 32px; }
+.mobile-cta-wrap .nav-cta { width: 100%; justify-content: center; padding: 14px; font-size: 15px; }
+.mobile-contact-line { margin-top: 24px; font-size: 13px; color: var(--ink-3); }
+.mobile-contact-line a { color: var(--accent); }
+
+/* hero */
+.hero { padding: clamp(48px, 8vh, 88px) 0 clamp(40px, 7vh, 72px); position: relative; }
+.hero-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: clamp(40px, 5vw, 80px); align-items: center; }
+.hero-left { display: flex; flex-direction: column; }
+.hero-meta { display: flex; gap: 24px; margin-bottom: 24px; flex-wrap: wrap; }
+.hero-meta span { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-4); }
+.hero-meta span + span::before { content: '·'; margin-right: 24px; }
+.hero-sub { margin-top: clamp(20px, 2.5vw, 32px); max-width: 520px; }
+.hero-actions { margin-top: 32px; display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+.btn { display: inline-flex; align-items: center; gap: 10px; padding: 13px 22px; border-radius: 999px; font-size: 14px; cursor: pointer; transition: all .25s ease; border: 1px solid transparent; font-family: var(--sans); line-height: 1; }
+.btn-primary { background: var(--accent); color: #fff; }
+.btn-primary:hover { background: var(--accent-bright); }
+.btn-ghost { background: transparent; color: var(--ink); border-color: var(--hair); }
+.btn-ghost:hover { border-color: var(--ink); }
+.btn .arrow { transition: transform .25s ease; }
+.btn:hover .arrow { transform: translateX(3px); }
+.hero-right { position: relative; }
+
+/* trust strip */
+.trust { padding: 28px 0; border-top: 1px solid var(--hair-2); border-bottom: 1px solid var(--hair-2); background: var(--accent-soft); }
+.trust-inner { display: grid; grid-template-columns: 200px 1fr; gap: 40px; align-items: start; }
+.trust-label { font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); line-height: 1.6; }
+.trust-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.trust-stat { display: flex; flex-direction: column; gap: 4px; border-left: 1px solid var(--hair); padding-left: 16px; }
+.trust-stat .num { font-family: var(--serif); font-size: clamp(22px, 2.4vw, 30px); font-weight: 400; letter-spacing: -0.01em; line-height: 1; }
+.trust-stat .num em { color: var(--accent); font-style: italic; font-weight: 400; font-family: var(--serif); }
+.trust-stat .pillar-title { font-size: 13px; color: var(--ink); font-weight: 500; margin-top: 2px; }
+.trust-stat .lbl { font-size: 13px; color: var(--ink-3); line-height: 1.5; margin-top: 2px; }
+
+/* section */
+.section { padding: clamp(64px, 9vh, 112px) 0; }
+.section + .section { border-top: 1px solid var(--hair-2); }
+.section-head { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 5vw, 72px); align-items: end; margin-bottom: clamp(40px, 6vh, 64px); }
+.section-head .left { display: flex; flex-direction: column; gap: 20px; }
+.section-head .right { color: var(--ink-2); font-size: 16px; line-height: 1.7; max-width: 500px; }
+.section-num { font-family: var(--serif); font-style: italic; font-size: 14px; color: var(--ink-3); }
+
+/* services */
+.services-list { display: flex; flex-direction: column; }
+.service-row {
+  width: 100%; text-align: left; background: transparent; border: none;
+  border-top: 1px solid var(--hair); font: inherit; color: inherit; cursor: pointer;
+  display: grid; grid-template-columns: 72px 1.2fr 1.4fr 0.7fr;
+  gap: clamp(20px, 3.5vw, 44px); padding: 32px 0;
+  align-items: start; transition: background .2s ease; position: relative;
+}
+.service-row:last-child { border-bottom: 1px solid var(--hair); }
+.service-row:hover, .service-row:focus-visible { background: var(--bg-2); outline: none; }
+.service-row:focus-visible { box-shadow: inset 3px 0 0 var(--accent-bright); }
+.service-row .num { font-family: var(--serif); font-style: italic; color: var(--ink-3); font-size: 17px; padding-top: 4px; }
+.service-row h3 { font-size: clamp(20px, 2vw, 26px); }
+.service-row .desc { color: var(--ink-2); font-size: 14.5px; line-height: 1.6; }
+.service-row .meta { display: flex; flex-direction: column; gap: 6px; align-items: flex-end; text-align: right; }
+.service-row .meta .tag { font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); }
+.service-row .meta .save { font-family: var(--serif); font-style: italic; color: var(--accent); font-size: 15px; }
+.service-row .arrow-cta { font-size: 13px; color: var(--ink-3); display: flex; align-items: center; gap: 6px; margin-top: 6px; }
+.service-row:hover .arrow-cta { color: var(--accent); }
+.phase-label { display: flex; justify-content: space-between; align-items: baseline; padding: 14px 0 8px; border-top: 1px solid var(--ink); margin-top: 12px; }
+.phase-label .phase-meta { font-size: 12px; color: var(--ink-3); font-family: var(--serif); font-style: italic; }
+.phase-label--spaced { margin-top: 56px; }
+
+/* methodology */
+.methodology { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border-top: 1px solid var(--ink); border-bottom: 1px solid var(--hair); }
+.method-step { padding: 28px 20px 32px; border-right: 1px solid var(--hair); display: flex; flex-direction: column; gap: 14px; transition: background .2s ease; }
+.method-step:last-child { border-right: none; }
+.method-step:hover { background: var(--bg-2); }
+.method-num { font-family: var(--serif); font-style: italic; font-size: 14px; color: var(--ink-3); }
+.method-week { font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); }
+.method-title h3 { font-size: 20px; line-height: 1.15; }
+.method-desc { font-size: 13.5px; line-height: 1.6; color: var(--ink-2); flex: 1; }
+.method-deliv { display: flex; flex-direction: column; gap: 6px; padding-top: 14px; border-top: 1px solid var(--hair-2); font-size: 12px; color: var(--ink-3); font-family: var(--serif); font-style: italic; }
+
+/* faq */
+.faq { margin-top: 72px; display: grid; grid-template-columns: 0.8fr 2fr; gap: clamp(32px, 5vw, 72px); align-items: start; }
+.faq-head { position: sticky; top: 100px; }
+.faq-list { display: flex; flex-direction: column; border-top: 1px solid var(--ink); }
+.faq-item { border-bottom: 1px solid var(--hair); }
+.faq-item summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: 48px 1fr 28px; gap: 14px; padding: 20px 0; align-items: baseline; transition: color .2s ease; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary:hover { color: var(--accent); }
+.faq-num { font-family: var(--serif); font-style: italic; color: var(--accent); font-size: 13px; }
+.faq-q { font-family: var(--serif); font-size: 18px; line-height: 1.3; color: var(--ink); font-weight: 400; }
+.faq-toggle { font-family: var(--serif); font-size: 20px; color: var(--ink-3); text-align: right; transition: transform .3s ease; line-height: 1; }
+.faq-item[open] .faq-toggle { transform: rotate(45deg); color: var(--accent); }
+.faq-a { padding: 0 0 24px 62px; font-size: 14.5px; line-height: 1.65; color: var(--ink-2); max-width: 680px; }
+.faq-cat + .faq-cat { margin-top: 8px; }
+.faq-cat-label { display: block; font-family: var(--serif); font-style: italic; font-size: 13px; color: var(--accent); letter-spacing: 0.04em; padding: 18px 0 8px; border-bottom: 1px solid var(--accent-soft); margin-bottom: 2px; }
+
+/* architecture hub grid */
+.arch-grid { display: grid; grid-template-columns: 1fr 1.9fr; gap: clamp(40px, 6vw, 80px); align-items: start; margin-top: 48px; }
+.arch-hub-headline { font-family: var(--serif); font-size: clamp(20px, 2vw, 27px); line-height: 1.28; font-weight: 400; color: var(--ink); margin-bottom: 14px; }
+.arch-hub-headline em { font-style: italic; color: var(--accent); }
+.arch-hub-lede { font-size: 14px; line-height: 1.68; color: var(--ink-2); margin-bottom: 28px; }
+.arch-points { display: flex; flex-direction: column; }
+.arch-point { display: grid; grid-template-columns: 40px 1fr; gap: 12px; align-items: baseline; padding: 12px 0; border-top: 1px solid var(--hair); font-size: 14px; color: var(--ink-2); }
+.arch-point:last-child { border-bottom: 1px solid var(--hair); }
+.arch-point-num { font-family: var(--serif); font-style: italic; color: var(--accent); font-size: 13px; }
+
+/* about */
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(48px, 6vw, 96px); align-items: start; }
+.about-body { display: flex; flex-direction: column; gap: 20px; }
+.about-body p { font-size: 16px; line-height: 1.75; color: var(--ink-2); }
+.about-body p + p { margin-top: 4px; }
+.about-aside { display: flex; flex-direction: column; gap: 24px; }
+.about-stat { display: flex; flex-direction: column; gap: 6px; padding: 24px 0; border-top: 1px solid var(--hair); }
+.about-stat:first-child { border-top: 1px solid var(--ink); }
+.about-stat .as-num { font-family: var(--serif); font-size: clamp(28px, 3vw, 40px); font-weight: 300; letter-spacing: -0.02em; line-height: 1; }
+.about-stat .as-num em { color: var(--accent); font-style: italic; }
+.about-stat .as-label { font-size: 13px; color: var(--ink-3); line-height: 1.5; }
+
+/* pricing */
+.pricing-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: auto auto auto 1fr auto; row-gap: 14px; border: 1px solid var(--hair); background: var(--hair-2); border-radius: 4px; overflow: hidden; position: relative; }
+.plan { background: #fff; padding: clamp(20px, 2vw, 28px); display: grid; grid-row: 1 / 6; grid-template-rows: subgrid; align-items: start; position: relative; border-right: 1px solid var(--hair); }
+.plan:last-child { border-right: none; }
+.plan.featured {
+  background: var(--accent); color: #fff;
+  border: none;
+  box-shadow: inset 4px 0 0 rgba(255,255,255,0.12), inset -4px 0 0 rgba(255,255,255,0.12);
+  z-index: 2;
+}
+.plan.featured .plan-name em { color: #C8D8EB; }
+.plan.featured .plan-strap, .plan.featured .plan-annot { color: rgba(200,218,236,0.82); }
+.plan.featured .plan-desc { color: rgba(210,228,242,0.85); }
+.plan.featured .plan-price { border-color: rgba(255,255,255,0.18); }
+.plan.featured .plan-feat-list li { border-color: rgba(255,255,255,0.14); color: rgba(220,235,248,0.92); }
+.plan.featured .feat-num { color: #7EB5D6; }
+.plan.featured .btn { background: #fff; color: var(--accent); border-color: transparent; }
+.plan.featured .btn:hover { background: var(--accent-soft); }
+.plan-name { font-family: var(--serif); font-size: 22px; line-height: 1.1; }
+.plan-name em { font-style: italic; color: var(--accent); font-weight: 400; }
+.plan-strap { font-family: var(--serif); font-style: italic; color: var(--ink-3); font-size: 13px; margin-top: 2px; line-height: 1.35; }
+.plan-desc { font-size: 13px; color: var(--ink-3); line-height: 1.5; margin-top: 6px; }
+.plan-price { display: flex; align-items: baseline; gap: 6px; padding: 10px 0 6px; border-top: 1px solid var(--hair); }
+.plan-price .amount { font-family: var(--serif); font-size: 34px; font-weight: 300; letter-spacing: -0.02em; line-height: 1; }
+.plan-price .per { font-size: 12px; color: var(--ink-3); }
+.plan.featured .plan-price .per { color: rgba(200,218,236,0.7); }
+.plan-annot { font-size: 11px; color: var(--ink-3); font-family: var(--serif); font-style: italic; }
+.plan-feat-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; align-self: start; }
+.plan-feat-list li { font-size: 12.5px; color: var(--ink-2); padding: 8px 0; border-top: 1px solid var(--hair-2); display: grid; grid-template-columns: 20px 1fr; gap: 6px; align-items: baseline; line-height: 1.4; }
+.feat-num { font-family: var(--serif); font-style: italic; color: var(--accent); font-size: 10.5px; }
+.plan .btn { align-self: end; width: 100%; justify-content: center; padding: 11px 18px; font-size: 13px; }
+.plan-badge { position: absolute; top: 16px; right: 16px; font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase; padding: 4px 9px; border-radius: 999px; background: rgba(255,255,255,0.14); color: #fff; border: 1px solid rgba(255,255,255,0.25); }
+
+/* contact */
+.contact-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: clamp(48px, 6vw, 96px); align-items: start; }
+.contact-form { display: flex; flex-direction: column; gap: 0; border-top: 1px solid var(--hair); }
+.field { display: grid; grid-template-columns: 160px 1fr; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--hair); align-items: center; }
+.field label { font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); }
+.field input, .field select, .field textarea { background: transparent; border: none; outline: none; font-family: var(--sans); font-size: 15px; color: var(--ink); padding: 4px 0; width: 100%; resize: none; }
+.field input:focus-visible, .field select:focus-visible, .field textarea:focus-visible,
+.chip:focus-visible { outline: 2px solid var(--accent-bright); outline-offset: 2px; }
+.field input::placeholder, .field textarea::placeholder { color: var(--ink-4); }
+.form-error { color: #b94040; font-size: 12px; margin-top: 4px; display: block; }
+.field.has-error { align-items: start; }
+.field.has-error input, .field.has-error textarea { border-bottom: 1px solid #b94040; }
+.field-options { display: flex; gap: 8px; flex-wrap: wrap; }
+.chip { padding: 6px 12px; border-radius: 999px; border: 1px solid var(--hair); font-size: 12.5px; cursor: pointer; transition: all .2s; color: var(--ink-2); user-select: none; background: transparent; font-family: var(--sans); }
+.chip:hover { border-color: var(--accent); color: var(--accent); }
+.chip.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.chip:focus-visible { outline: 2px solid var(--accent-bright); outline-offset: 2px; }
+.field textarea { min-height: 56px; line-height: 1.5; padding-top: 4px; }
+.form-submit { display: flex; justify-content: space-between; align-items: center; margin-top: 24px; gap: 16px; flex-wrap: wrap; }
+.form-note { font-size: 12px; color: var(--ink-3); max-width: 300px; line-height: 1.55; }
+.form-success { text-align: center; padding: 48px 24px; border: 1px solid var(--hair); border-radius: 4px; }
+.form-success .success-icon { width: 48px; height: 48px; background: var(--accent-soft); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; }
+.form-success h4 { font-family: var(--serif); font-size: 26px; margin-bottom: 8px; }
+.form-success p { font-size: 15px; color: var(--ink-3); max-width: 360px; margin: 0 auto 24px; line-height: 1.6; }
+.booking { background: var(--bg); border: 1px solid var(--hair); border-radius: 4px; overflow: hidden; }
+.booking-embed-header { padding: clamp(20px, 2.5vw, 28px); border-bottom: 1px solid var(--hair-2); }
+.booking h4 { font-family: var(--serif); font-size: 20px; margin-bottom: 4px; font-weight: 400; color: var(--ink); }
+.booking-desc { font-size: 13px; color: var(--ink-3); line-height: 1.55; }
+.booking-cal { width: 100%; min-height: 640px; }
+
+/* skip link */
+.skip-link { position: absolute; left: -9999px; top: 8px; z-index: 100; background: var(--accent); color: #fff; padding: 10px 16px; border-radius: 4px; font-size: 13px; }
+.skip-link:focus { left: 16px; }
+
+/* eyebrow utility */
+.eyebrow--xs { font-size: 10px; }
+.eyebrow--mb { margin-bottom: 16px; }
+.lede--tight { margin-top: 10px; }
+.lede--lg { margin-top: 20px; }
+
+/* footer */
+.footer { padding: clamp(48px, 6vh, 72px) 0 32px; border-top: 1px solid var(--hair); }
+.footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 48px; }
+.footer h5 { font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); font-weight: 500; margin-bottom: 16px; }
+.footer ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+.footer a { font-size: 13.5px; color: var(--ink-2); cursor: pointer; }
+.footer a:hover { color: var(--accent); }
+.footer-tag { font-family: var(--serif); font-size: 17px; line-height: 1.55; color: var(--ink-2); margin-top: 12px; max-width: 300px; }
+.footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 28px; margin-top: 48px; border-top: 1px solid var(--hair); font-size: 12px; color: var(--ink-3); flex-wrap: wrap; gap: 12px; }
+.footer-legal { display: flex; gap: 20px; }
+.footer-legal a { font-size: 12px; color: var(--ink-3); }
+.footer-legal a:hover { color: var(--accent); }
+
+/* diagram primitives */
+.node-card { background: #fff; border: 1px solid var(--hair); border-radius: 6px; padding: 12px 14px; box-shadow: 0 1px 0 rgba(0,0,0,0.02); transition: all .3s ease; }
+
+/* sticky mobile cta */
+.sticky-mobile-cta { display: none; }
+
+/* cookie banner */
+.cookie-banner {
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 150;
+  background: var(--ink); color: var(--bg);
+  padding: 16px var(--gut); display: flex; align-items: center; gap: 20px; justify-content: space-between;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  flex-wrap: wrap;
+}
+.cookie-text { font-size: 13px; color: rgba(250,250,247,0.75); line-height: 1.5; max-width: 640px; }
+.cookie-text a { color: rgba(250,250,247,0.9); text-decoration: underline; text-underline-offset: 2px; }
+.cookie-actions { display: flex; gap: 10px; flex-shrink: 0; }
+.cookie-accept { padding: 8px 18px; background: var(--bg); color: var(--ink); border: none; border-radius: 999px; font-family: var(--sans); font-size: 13px; cursor: pointer; transition: background .2s ease; }
+.cookie-accept:hover { background: var(--bg-2); }
+.cookie-decline { padding: 8px 18px; background: transparent; color: rgba(250,250,247,0.6); border: 1px solid rgba(255,255,255,0.2); border-radius: 999px; font-family: var(--sans); font-size: 13px; cursor: pointer; }
+
+/* reveal */
+.reveal { opacity: 0; transform: translateY(14px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+
+
+/* density */
+body.tight .section { padding: clamp(44px, 6vh, 80px) 0; }
+body.tight .service-row { padding: 22px 0; }
+body.tight .hero { padding: clamp(32px, 5vh, 56px) 0 clamp(24px, 4vh, 40px); }
+
+/* responsive */
+@media (max-width: 1024px) {
+  .nav-links { gap: 16px; }
+}
+@media (max-width: 920px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-right { display: none; }
+  .section-head { grid-template-columns: 1fr; }
+  .service-row { grid-template-columns: 44px 1fr; }
+  .service-row .desc, .service-row .meta { grid-column: 2; }
+  .service-row .meta { align-items: flex-start; text-align: left; }
+  .arch-grid { grid-template-columns: 1fr; }
+  .about-grid { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .pricing-grid { grid-template-columns: 1fr; grid-template-rows: none; row-gap: 0; }
+  .plan { grid-row: auto; display: flex; flex-direction: column; gap: 12px; border-right: none; border-bottom: 1px solid var(--hair); }
+  .plan:last-child { border-bottom: none; }
+  .plan-feat-list { flex: 1; }
+  .plan .btn { margin-top: auto; align-self: unset; }
+  .plan.featured { box-shadow: none; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .field { grid-template-columns: 1fr; gap: 4px; }
+  .trust-inner { grid-template-columns: 1fr; gap: 16px; }
+  .trust-stats { grid-template-columns: repeat(2, 1fr); }
+  .faq { grid-template-columns: 1fr; }
+  .faq-head { position: static; }
+  .faq-a { padding-left: 48px; }
+  .methodology { grid-template-columns: 1fr 1fr; }
+  .method-step { border-bottom: 1px solid var(--hair); }
+  .method-step:nth-child(odd) { border-right: 1px solid var(--hair); }
+  .method-step:nth-child(even) { border-right: none; }
+  .sticky-mobile-cta { display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 98; padding: 12px var(--gut) calc(12px + env(safe-area-inset-bottom)); background: var(--bg); border-top: 1px solid var(--hair-2); }
+  .sticky-mobile-cta .btn { flex: 1; justify-content: center; }
+}
+@media (max-width: 640px) {
+  .methodology { grid-template-columns: 1fr; }
+  .method-step { border-right: none; }
+  .trust-stats { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; gap: 8px; }
+}
+</style>
 </head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+<div id="root"></div>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<!-- Global SVG defs for cross-component arrow markers -->
+<svg style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
+  <defs>
+    <marker id="g-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#A3A3A3" />
+    </marker>
+    <marker id="g-arrow-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#003A70" />
+    </marker>
+  </defs>
+</svg>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin></script>
+
+<script type="text/babel">
+const { useState, useEffect, useRef, useCallback } = React;
+
+/* ── Brand & Arrow ───────────────────────────── */
+const BrandMark = () => (
+  <svg className="brand-mark" viewBox="0 0 32 32">
+    <circle cx="16" cy="16" r="15" fill="none" stroke="var(--ink)" strokeWidth="1" />
+    <circle cx="16" cy="16" r="3" fill="var(--accent)" />
+    <line x1="16" y1="1" x2="16" y2="13" stroke="var(--ink)" strokeWidth="1" />
+    <line x1="16" y1="19" x2="16" y2="31" stroke="var(--ink)" strokeWidth="1" />
+    <line x1="1" y1="16" x2="13" y2="16" stroke="var(--ink)" strokeWidth="1" />
+    <line x1="19" y1="16" x2="31" y2="16" stroke="var(--ink)" strokeWidth="1" />
+  </svg>
+);
+
+const Arrow = ({ size = 14 }) => (
+  <svg className="arrow" width={size} height={size} viewBox="0 0 16 16" fill="none">
+    <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);
+
+const CheckIcon = () => (
+  <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+    <path d="M5 11l4 4 8-8" stroke="var(--accent)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);
+
+/* ── Nav ─────────────────────────────────────── */
+const Nav = ({ onJump }) => {
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  useEffect(() => {
+    document.body.style.overflow = mobileOpen ? 'hidden' : '';
+    return () => { document.body.style.overflow = ''; };
+  }, [mobileOpen]);
+
+  const jump = (id) => { onJump(id); setMobileOpen(false); };
+
+  const links = [
+    { label: 'Architecture', id: 'architecture' },
+    { label: 'Modules', id: 'modules' },
+    { label: 'Methodology', id: 'methodology' },
+    { label: 'Engagements', id: 'pricing' },
+    { label: 'Contact', id: 'contact' },
+  ];
+
+  return (
+    <>
+      <nav className="nav">
+        <div className="wrap nav-inner">
+          <a className="brand" onClick={() => jump('top')}>
+            <BrandMark />
+            <span><b>Kaspa</b><i>flow</i></span>
+          </a>
+          <div className="nav-links">
+            {links.map(l => (
+              <a key={l.id} onClick={() => jump(l.id)}>{l.label}</a>
+            ))}
+          </div>
+          <div className="nav-right">
+            <a className="nav-cta" href="#contact" onClick={(e) => { e.preventDefault(); jump('contact'); }}>
+              Arrange a consultation <Arrow />
+            </a>
+            <button className={`hamburger${mobileOpen ? ' open' : ''}`} aria-label="Toggle menu" onClick={() => setMobileOpen(o => !o)}>
+              <span /><span /><span />
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      <div className={`mobile-overlay${mobileOpen ? ' open' : ''}`}>
+        <a className="brand" onClick={() => jump('top')} style={{ display: 'inline-flex' }}>
+          <BrandMark /><span style={{ marginLeft: 10 }}><b>Kaspa</b><i>flow</i></span>
+        </a>
+        <nav className="mobile-nav-links">
+          {links.map(l => (
+            <a key={l.id} onClick={() => jump(l.id)}>
+              {l.label} <em>→</em>
+            </a>
+          ))}
+        </nav>
+        <div className="mobile-cta-wrap">
+          <a className="nav-cta" href="#contact" onClick={(e) => { e.preventDefault(); jump('contact'); }}>
+            Arrange a consultation <Arrow />
+          </a>
+        </div>
+        <p className="mobile-contact-line">Or email us at <a href="mailto:Dev@kaspaflow.co.uk">Dev@kaspaflow.co.uk</a></p>
+      </div>
+    </>
+  );
+};
+
+/* ── Hero ────────────────────────────────────── */
+const Hero = ({ onJump }) => {
+  const go = (id) => (e) => { e.preventDefault(); onJump(id); };
+  return (
+    <section className="hero" id="top">
+      <div className="wrap">
+        <div className="hero-meta">
+          <span>Established London · 2023</span>
+        </div>
+        <div className="hero-grid">
+          <div className="hero-left reveal">
+            <h1>A connected <em>operating system</em> for recruitment firms.</h1>
+            <div className="hero-sub">
+              <p className="lede">Kaspaflow installs purpose-built modules — connected through a single hub — that handle the administrative weight of a modern recruitment desk. Your consultants are returned to the work that earns fees.</p>
+            </div>
+            <div className="hero-actions">
+              <a className="btn btn-primary" href="#contact" onClick={go('contact')}>
+                Arrange a consultation <Arrow />
+              </a>
+              <a className="btn btn-ghost" href="#architecture" onClick={go('architecture')}>
+                View the architecture
+              </a>
+            </div>
+          </div>
+          <div className="hero-right">
+            <HeroDiagram />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+/* ── Trust ───────────────────────────────────── */
+const Trust = () => {
+  const pillars = [
+    { n: '01', t: 'UK-built, UK-hosted', d: 'Designed in London for UK recruitment practice. All data stored on bespoke, non-cloud infrastructure — sovereign storage, guaranteed privacy.' },
+    { n: '02', t: 'Connected modules, one hub', d: 'Screening, qualification, intake, proposals, reporting and outreach — on a shared data layer, not disconnected tools.' },
+    { n: '03', t: 'Licence-and-host model', d: 'You licence the modules; we host and operate them at no additional cost. Migrate to your own infrastructure whenever it suits.' },
+    { n: '04', t: 'Honest counsel', d: 'Where automation is not the appropriate response, we say so plainly. We decline more engagements than we accept.' },
+  ];
+  return (
+    <section className="trust">
+      <div className="wrap trust-inner">
+        <div className="trust-label">A considered approach to recruitment automation. Built for partners who measure outcomes in months, not minutes.</div>
+        <div className="trust-stats">
+          {pillars.map(p => (
+            <div className="trust-stat reveal" key={p.n}>
+              <div className="num"><em>{p.n}</em></div>
+              <div className="pillar-title">{p.t}</div>
+              <div className="lbl">{p.d}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+/* ── Architecture ────────────────────────────── */
+const Architecture = () => {
+  const points = [
+    { n: '01', text: 'Shared candidate, client and pipeline records' },
+    { n: '02', text: 'Single, written-from-data dashboard' },
+    { n: '03', text: 'Connects to Bullhorn, Vincere, JobAdder, Salesforce' },
+    { n: '04', text: 'UK data residency · bespoke non-cloud storage' },
+  ];
+  return (
+    <section className="section" id="architecture">
+      <div className="wrap">
+        <div className="section-head reveal">
+          <div className="left">
+            <div className="eyebrow"><span className="dot" />The Architecture</div>
+            <h2>Modular by design. <em>One</em> hub. A deliberate sequence.</h2>
+          </div>
+          <div className="right">
+            We do not deploy everything at once. Phase one establishes the three operational modules every firm requires — screening, qualification and intake. The Kaspaflow hub binds them through a shared data layer. Phase two extends into client-facing work: proposals, reporting and outreach.
+          </div>
+        </div>
+        <div className="arch-grid">
+          <div className="reveal">
+            <h3 className="arch-hub-headline">The hub is what makes every module behave as <em>one</em>.</h3>
+            <p className="arch-hub-lede">A shared data layer and a single dashboard. The screener informs the qualifier; the qualifier informs onboarding; onboarding feeds proposals and reporting. Every module enriches every other — without rip-and-replace.</p>
+            <div className="arch-points">
+              {points.map(p => (
+                <div key={p.n} className="arch-point">
+                  <span className="arch-point-num">{p.n}</span>
+                  <span>{p.text}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="reveal reveal-delay-1">
+            <HeroDiagram />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+/* ── Modules ─────────────────────────────────── */
+const ModulesSection = () => {
+  const phase1 = [
+    { n: '01', kind: 'cv', title: 'CV Screener', status: 'In production', desc: 'A trained reader that evaluates candidate documents against the brief, ranks the stack, and articulates its reasoning in language a senior consultant would recognise. Our flagship module — deployed on live desks today.', tag: 'Module 01', save: 'Rank the candidate stack' },
+    { n: '02', kind: 'lead', title: 'Lead Qualifier', status: 'Phase one', desc: 'Inbound enquiries are scored against firm-defined criteria — sector fit, mandate value, prior relationship — before a consultant ever reads them. The desk works the qualified, not the noise.', tag: 'Module 02', save: 'Score inbound leads' },
+    { n: '03', kind: 'onboard', title: 'Onboarding Bot', status: 'Phase one', desc: 'Automates the procedural choreography of new client engagement: brief capture, document collection, SLA confirmation and handover. What previously consumed a week becomes a day.', tag: 'Module 03', save: 'Automate client intake' },
+  ];
+  const phase2 = [
+    { n: '04', kind: 'proposal', title: 'Proposal Generator', status: 'Phase two', desc: "Drafts proposals in your firm's established voice, drawing on prior submissions, fee structures and case histories. A consultant reviews, refines and sends — never starts from a blank page.", tag: 'Module 04', save: 'Auto-draft proposals' },
+    { n: '05', kind: 'reporting', title: 'Client Reporting', status: 'Phase two', desc: 'Weekly client-facing reports written from live pipeline data, in the prose your firm prefers. Replaces the spreadsheet-and-paste ritual that consumes Friday afternoons.', tag: 'Module 05', save: 'Auto-generate reports' },
+    { n: '06', kind: 'email', title: 'Email Automation', status: 'Phase two', desc: 'Outreach and follow-up cadences that read as though a consultant wrote them — because the consultant defines the patterns. Branching logic, reply detection, intelligent hand-off.', tag: 'Module 06', save: 'Outreach + follow-ups' },
+  ];
+  const Row = ({ s }) => (
+    <div className="service-row" id={`module-${s.kind}`}>
+      <div className="num">{s.n}</div>
+      <div>
+        <h3>{s.title}</h3>
+        <div className="arrow-cta">{s.status}</div>
+      </div>
+      <div className="desc">{s.desc}</div>
+      <div className="meta">
+        <ModuleDiagram kind={s.kind} />
+        <span className="tag">{s.tag}</span>
+        <span className="save">{s.save}</span>
+      </div>
+    </div>
+  );
+  return (
+    <section className="section" id="modules">
+      <div className="wrap">
+        <div className="section-head reveal">
+          <div className="left">
+            <div className="eyebrow"><span className="dot" />The Modules</div>
+            <h2>Each instrument, deployed in <em>sequence</em>.</h2>
+          </div>
+          <div className="right">Each module solves a discrete, measurable problem. Together — through the hub — they become an operating system. Phase one is foundational; phase two compounds the return.</div>
+        </div>
+        <div className="phase-label">
+          <span className="eyebrow"><span className="dot" />Phase 01 — Core</span>
+          <span className="phase-meta">Weeks 1–4 · Three operational modules</span>
+        </div>
+        <div className="services-list">
+          {phase1.map((s, i) => <Row key={i} s={s} />)}
+        </div>
+        <div className="phase-label phase-label--spaced">
+          <span className="eyebrow"><span className="dot" />Phase 02 — Expand</span>
+          <span className="phase-meta">Weeks 5–12 · Three client-facing modules</span>
+        </div>
+        <div className="services-list">
+          {phase2.map((s, i) => <Row key={i} s={s} />)}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+
+/* ── Methodology ─────────────────────────────── */
+const Methodology = () => {
+  const steps = [
+    { n: '01', week: 'Week 0', title: 'Process audit', desc: "A working day spent on your desk — observing, timing and documenting the manual handoffs that consume consultant hours. We surface friction; we do not assume it.", deliv: 'Process map · friction inventory · ROI model' },
+    { n: '02', week: 'Weeks 1–4', title: 'Phase one build', desc: "CV Screener, Lead Qualifier and Onboarding Bot configured to your firm's sector, voice and existing systems. Built in your environment, reviewed against your data.", deliv: 'Three operational modules · hub configuration' },
+    { n: '03', week: 'Weeks 5–12', title: 'Phase two extension', desc: 'Once the core is settled, we extend into client-facing work: Proposal Generator, Client Reporting, Email Automation. Each module added only after the prior is in confident daily use.', deliv: 'Three client-facing modules · unified dashboard' },
+    { n: '04', week: 'Ongoing', title: 'Refinement and handover', desc: 'A weekly cadence of refinement — your firm tells us what is working, we adjust. Documented SOPs, recorded handover and the option to take the system fully in-house at any point.', deliv: 'Documentation · training · in-house handover' },
+  ];
+  const faqCategories = [
+    { id: 'platform', label: 'Platform & Data', items: [
+      { q: 'Where does our data sit?', a: 'On Kaspaflow infrastructure, hosted within the United Kingdom on bespoke non-cloud storage solutions — sovereign by design, with no third-party hyperscaler in the chain. Should you wish to migrate to your own servers at any stage, the build transfers with you.' },
+      { q: 'What integrates with our existing CRM?', a: 'Bullhorn, Vincere, JobAdder and Salesforce are supported on the Firm tier as standard. Foundation includes two integrations of your choice. Atelier supports custom or proprietary systems.' },
+      { q: 'Can a single module be trialled before scaling?', a: 'Yes — Foundation exists for precisely this. Most firms begin with the CV Screener, prove the return, and add modules from there. There is no requirement to commit to all modules up front.' },
+    ]},
+    { id: 'implementation', label: 'Implementation', items: [
+      { q: 'How long until phase one is operating on our desk?', a: 'Three to four weeks from kickoff. Process audit in week zero, configuration in weeks one and two, parallel running in weeks three and four. Your team uses the modules alongside existing workflows before any handover.' },
+      { q: 'Do we need a technical lead on our side?', a: 'No. The engagement is run by a named Kaspaflow specialist who works directly with your operations lead or managing partner. Technical involvement on your side is reviewed during the audit, not assumed.' },
+    ]},
+    { id: 'engagements', label: 'Engagements', items: [
+      { q: 'What happens if we cancel?', a: 'Foundation is 30-day rolling. Firm and Atelier carry annual terms with documented exit. In all cases the configuration, prompts and process documentation are yours to take in-house.' },
+    ]},
+  ];
+  return (
+    <section className="section" id="methodology">
+      <div className="wrap">
+        <div className="section-head reveal">
+          <div className="left">
+            <div className="eyebrow"><span className="dot" />How We Work</div>
+            <h2>A measured engagement. <em>Documented</em> at every stage.</h2>
+          </div>
+          <div className="right">Automation is not a software purchase. It is a change to how a desk operates. We treat it accordingly — with a sequence that earns trust before it asks for scale.</div>
+        </div>
+        <div className="methodology">
+          {steps.map((s, i) => (
+            <div className={`method-step reveal reveal-delay-${i}`} key={i}>
+              <div className="method-num">{s.n}</div>
+              <div className="method-week">{s.week}</div>
+              <div className="method-title"><h3>{s.title}</h3></div>
+              <div className="method-desc">{s.desc}</div>
+              <div className="method-deliv">
+                <span className="eyebrow eyebrow--xs">Deliverable</span>
+                <span>{s.deliv}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="faq">
+          <div className="faq-head">
+            <div className="eyebrow"><span className="dot" />Frequently Asked</div>
+            <p className="lede lede--tight">The questions every partner asks before the first conversation.</p>
+          </div>
+          <div className="faq-list">
+            {faqCategories.map((cat, ci) => {
+              let runningIdx = 0;
+              for (let k = 0; k < ci; k++) runningIdx += faqCategories[k].items.length;
+              return (
+                <div className="faq-cat" key={cat.id}>
+                  <div className="faq-cat-label">{cat.label}</div>
+                  {cat.items.map((f, j) => {
+                    const idx = runningIdx + j;
+                    return (
+                      <details className="faq-item" key={idx}>
+                        <summary>
+                          <span className="faq-num">{String(idx + 1).padStart(2, '0')}</span>
+                          <span className="faq-q">{f.q}</span>
+                          <span className="faq-toggle">+</span>
+                        </summary>
+                        <div className="faq-a">{f.a}</div>
+                      </details>
+                    );
+                  })}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+/* ── Pricing ─────────────────────────────────── */
+const Pricing = ({ onJump }) => {
+  const plans = [
+    {
+      name: 'Foundation',
+      strap: 'For boutique desks beginning their automation work',
+      desc: 'A single licensed module, configured to your firm and operated on Kaspaflow infrastructure. A contained problem, a defined return.',
+      price: '£1,200', per: '/ month', annot: 'per module · 30-day rolling',
+      feats: ['One licensed module of your choosing', 'Up to 5 users', '500 candidate screens per month', 'Two existing-system integrations', 'Hosted on Kaspaflow UK infrastructure', 'Continuous refinement and support', 'Migrate to in-house servers at any point'],
+      cta: 'Begin with Foundation',
+    },
+    {
+      name: 'Firm',
+      strap: 'For established agencies, 6–25 consultants',
+      desc: 'The principal engagement — all modules, hub-connected, configured to your firm and run on our infrastructure.',
+      price: '£2,400', per: '/ month', annot: 'billed annually · 20% saving',
+      feats: ['All modules included', 'Up to 25 users', '2,500 candidate screens per month', 'Bullhorn, Vincere, JobAdder, Salesforce', 'Custom proposal templates and report branding', 'White-glove onboarding · dedicated specialist', 'Priority support · 4h response · dedicated Slack', 'Quarterly business reviews'],
+      cta: 'Arrange a consultation', featured: true, badge: 'Recommended',
+    },
+    {
+      name: 'Atelier',
+      strap: 'For firms requiring bespoke architecture',
+      desc: 'Proprietary scoring, custom data models and internal tooling built precisely to your firm\'s requirements.',
+      price: 'Bespoke', per: '', annot: 'scoped per engagement',
+      feats: ['Custom system architecture', 'Unlimited users and screens', 'Dedicated build team', 'Proprietary models and scoring logic', 'On-site discovery and workshops', 'Self-host or Kaspaflow-host (your choice)', 'White-glove handover and training'],
+      cta: 'Request a proposal',
+    },
+  ];
+  const goContact = (e) => { e.preventDefault(); onJump('contact'); };
+  return (
+    <section className="section" id="pricing">
+      <div className="wrap">
+        <div className="section-head reveal">
+          <div className="left">
+            <div className="eyebrow"><span className="dot" />Engagements</div>
+            <h2>Three considered ways to <em>begin</em>.</h2>
+          </div>
+          <div className="right">You licence the modules; we host and operate them on UK-based infrastructure at no additional cost. The build is yours — migrate to in-house servers whenever it suits.</div>
+        </div>
+        <div className="pricing-grid">
+          {plans.map((p, i) => (
+            <div className={`plan${p.featured ? ' featured' : ''}`} key={i}>
+              {p.badge && <div className="plan-badge">{p.badge}</div>}
+              <div className="plan-top">
+                <div className="plan-name">{p.name}</div>
+                <div className="plan-strap">{p.strap}</div>
+                <div className="plan-desc">{p.desc}</div>
+              </div>
+              <div className="plan-price">
+                <span className="amount">{p.price}</span>
+                <span className="per">{p.per}</span>
+              </div>
+              <div className="plan-annot">{p.annot}</div>
+              <ul className="plan-feat-list">
+                {p.feats.map((f, j) => (
+                  <li key={j}><span className="feat-num">{String(j + 1).padStart(2, '0')}</span><span>{f}</span></li>
+                ))}
+              </ul>
+              <a className={`btn ${p.featured ? 'btn-primary' : 'btn-ghost'}`} href="#contact" onClick={goContact}>
+                {p.cta} <Arrow />
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+/* ── About ───────────────────────────────────── */
+const About = () => (
+  <section className="section" id="about" style={{ background: 'var(--bg-2)' }}>
+    <div className="wrap">
+      <div className="section-head reveal">
+        <div className="left">
+          <div className="eyebrow"><span className="dot" />About Kaspaflow</div>
+          <h2>Built from the <em>inside</em> out.</h2>
+        </div>
+        <div className="right">We are practitioners first. The technology is the means; the return to your consultants is the measure.</div>
+      </div>
+      <div className="about-grid">
+        <div className="about-body reveal">
+          <p>Kaspaflow was founded in London in 2023 by practitioners who spent the better part of a decade inside recruitment desks before turning to the systems that run them. We have sat in the chair. We understand the pace of a live mandate, the administration that accumulates beneath it, and the cost — in hours and in fees — when that administration is managed by hand.</p>
+          <p>We build automation for a practice we understand from the inside. Our engagements are small by design: we decline more enquiries than we accept, and we measure success by whether the system is still operating accurately eighteen months after delivery.</p>
+          <p>We do not believe in automation for its own sake. Where a process is better served by a person, we say so. The honest answer is the one that earns a lasting partnership.</p>
+          <div style={{ marginTop: 28 }}>
+            <a className="btn btn-ghost" href="mailto:Dev@kaspaflow.co.uk">
+              Dev@kaspaflow.co.uk <Arrow />
+            </a>
+          </div>
+        </div>
+        <div className="about-aside reveal reveal-delay-1">
+          {[
+            { n: <><em>Week</em> 0</>, l: 'Every engagement begins with a process audit. We observe before we build.' },
+            { n: <><em>3–4</em> weeks</>, l: 'From kickoff to phase one in production on your desk.' },
+            { n: <>Purpose-built</>, l: 'Designed for recruitment from the ground up. Not adapted from a generic automation platform.' },
+            { n: <><em>UK</em> only</>, l: 'All data stored on bespoke non-cloud infrastructure within the United Kingdom.' },
+          ].map((s, i) => (
+            <div className="about-stat" key={i}>
+              <div className="as-num">{s.n}</div>
+              <div className="as-label">{s.l}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+);
+
+/* ── Cal.com inline embed ────────────────────── */
+const CalEmbed = () => {
+  const ref = useRef(null);
+  useEffect(() => {
+    if (!ref.current || !window.Cal) return;
+    window.Cal("inline", {
+      elementOrSelector: ref.current,
+      calLink: "kaspaflow",
+      layout: "month_view",
+    });
+    window.Cal("ui", {
+      theme: "light",
+      hideEventTypeDetails: true,
+      layout: "month_view",
+      styles: {
+        branding: { brandColor: "#003A70" },
+      },
+      cssVarsPerTheme: {
+        light: {
+          "cal-brand":           "#003A70",
+          "cal-brand-emphasis":  "#0A66C2",
+          "cal-bg":              "#FAFAF7",
+          "cal-bg-subtle":       "#F2F1EC",
+          "cal-bg-muted":        "#E8E6DF",
+          "cal-border":          "#D7D5CE",
+          "cal-border-subtle":   "#E5E3DC",
+          "cal-text":            "#18181A",
+          "cal-text-emphasis":   "#18181A",
+          "cal-text-muted":      "#595959",
+        },
+      },
+    });
+  }, []);
+  return <div ref={ref} className="booking-cal" />;
+};
+
+/* ── Contact ─────────────────────────────────── */
+const Contact = () => {
+  const [interest, setInterest] = useState('Kaspaflow Hub');
+  const [deskSize, setDeskSize] = useState('');
+  const [errors, setErrors] = useState({});
+  const [formState, setFormState] = useState('idle');
+  const emailRe = /^\S+@\S+\.\S+$/;
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const f = e.target;
+    const name     = f.elements.namedItem('name').value.trim();
+    const email    = f.elements.namedItem('email').value.trim();
+    const firm     = f.elements.namedItem('firm').value.trim();
+    const position = f.elements.namedItem('position').value.trim();
+    const note     = f.elements.namedItem('note').value.trim();
+    const errs = {};
+    if (!name)  errs.name  = 'Required';
+    if (!email) errs.email = 'Required';
+    else if (!emailRe.test(email)) errs.email = 'Enter a valid email address';
+    setErrors(errs);
+    if (Object.keys(errs).length) return;
+    setFormState('loading');
+    try {
+      const res = await fetch(
+        'https://api.airtable.com/v0/app60Zb1hEqqz50ru/Kaspaflow%20Contact%20form',
+        {
+          method: 'POST',
+          headers: {
+            'Authorization': 'Bearer pateUMcWnzcbOvIFB',
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            fields: {
+              'Name':            name,
+              'Email':           email,
+              'Firm':            firm,
+              'Position':        position,
+              'Desk Size':       deskSize,
+              'Module Interest': interest,
+              'Message':         note,
+              'Submitted':       new Date().toISOString(),
+            },
+          }),
+        }
+      );
+      if (!res.ok) throw new Error('airtable');
+      setFormState('success');
+    } catch {
+      setFormState('idle');
+      setErrors({ submit: 'Something went wrong — please email us directly at Dev@kaspaflow.co.uk' });
+    }
+  };
+
+  return (
+    <section className="section" id="contact">
+      <div className="wrap">
+        <div className="section-head reveal">
+          <div className="left">
+            <div className="eyebrow"><span className="dot" />Arrange a Consultation</div>
+            <h2>A considered conversation. <em>No</em> pitch deck.</h2>
+          </div>
+          <div className="right">Thirty minutes with a partner. We will ask how your desk operates today, where the friction sits, and whether automation is the appropriate response. Where it is not, we will say so plainly.</div>
+        </div>
+        <div className="contact-grid">
+          {formState === 'success' ? (
+            <div className="form-success">
+              <div className="success-icon"><CheckIcon /></div>
+              <h4>Enquiry received.</h4>
+              <p>A partner will respond within one working day. We do not maintain a newsletter or follow-up sequence — we observe the discipline we recommend.</p>
+              <button className="btn btn-ghost" onClick={() => setFormState('idle')}>Send another enquiry</button>
+            </div>
+          ) : (
+            <form className="contact-form" noValidate onSubmit={handleSubmit}>
+              <div className={`field${errors.name ? ' has-error' : ''}`}>
+                <label>Name</label>
+                <div>
+                  <input name="name" required placeholder="Full name" />
+                  {errors.name && <span className="form-error">{errors.name}</span>}
+                </div>
+              </div>
+              <div className="field">
+                <label>Firm</label>
+                <input name="firm" placeholder="Firm name" />
+              </div>
+              <div className="field">
+                <label>Position</label>
+                <input name="position" placeholder="Managing Partner, Director, Head of Operations" />
+              </div>
+              <div className={`field${errors.email ? ' has-error' : ''}`}>
+                <label>Work email</label>
+                <div>
+                  <input name="email" type="email" required placeholder="name@firm.co.uk" />
+                  {errors.email && <span className="form-error">{errors.email}</span>}
+                </div>
+              </div>
+              <div className="field">
+                <label>Desk size</label>
+                <div className="field-options">
+                  {['1–5', '6–15', '16–40', '40+'].map(o => (
+                    <button type="button" key={o} className={`chip${deskSize === o ? ' active' : ''}`} onClick={() => setDeskSize(o)}>{o}</button>
+                  ))}
+                </div>
+              </div>
+              <div className="field">
+                <label>Module interest</label>
+                <div className="field-options">
+                  {['Kaspaflow Hub', 'Custom'].map(o => (
+                    <button type="button" key={o} className={`chip${interest === o ? ' active' : ''}`} onClick={() => setInterest(o)}>{o}</button>
+                  ))}
+                </div>
+              </div>
+              <div className="field">
+                <label>Your operation</label>
+                <textarea name="note" placeholder="A twelve-person legal contract desk on Bullhorn, losing approximately a day each week to CV administration…" />
+              </div>
+              {errors.submit && <span className="form-error" role="alert" style={{ marginBottom: 8, display: 'block' }}>{errors.submit}</span>}
+              <div className="form-submit">
+                <span className="form-note">A reply within one working day. We do not maintain a newsletter, nor any follow-up sequence.</span>
+                <button className="btn btn-primary" type="submit" disabled={formState === 'loading'}>
+                  {formState === 'loading' ? 'Sending…' : <><span>Submit enquiry</span> <Arrow /></>}
+                </button>
+              </div>
+            </form>
+          )}
+
+          <aside className="booking">
+            <div className="booking-embed-header">
+              <div className="eyebrow eyebrow--mb"><span className="dot" />Or reserve directly</div>
+              <h4>Thirty minutes with a partner</h4>
+              <p className="booking-desc">Select a time below. A calendar invitation follows automatically — no follow-up required.</p>
+            </div>
+            <CalEmbed />
+          </aside>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+/* ── Footer ──────────────────────────────────── */
+const Footer = ({ onJump }) => {
+  const go = (id) => (e) => { e.preventDefault(); onJump(id); };
+  return (
+    <footer className="footer">
+      <div className="wrap">
+        <div className="footer-grid">
+          <div>
+            <a className="brand" href="#top" onClick={go('top')}><BrandMark /><span style={{ marginLeft: 10 }}><b>Kaspa</b><i>flow</i></span></a>
+            <p className="footer-tag">A connected operating system for recruitment firms. Built in London, in service of the consultants who would rather be on the telephone.</p>
+          </div>
+          <div>
+            <h5>Modules</h5>
+            <ul>
+              <li><a href="#module-cv" onClick={go('module-cv')}>CV Screener</a></li>
+              <li><a href="#module-lead" onClick={go('module-lead')}>Lead Qualifier</a></li>
+              <li><a href="#module-onboard" onClick={go('module-onboard')}>Onboarding Bot</a></li>
+              <li><a href="#module-proposal" onClick={go('module-proposal')}>Proposal Generator</a></li>
+              <li><a href="#module-reporting" onClick={go('module-reporting')}>Client Reporting</a></li>
+              <li><a href="#module-email" onClick={go('module-email')}>Email Automation</a></li>
+            </ul>
+          </div>
+          <div>
+            <h5>Firm</h5>
+            <ul>
+              <li><a href="#architecture" onClick={go('architecture')}>Architecture</a></li>
+              <li><a href="#methodology" onClick={go('methodology')}>Methodology</a></li>
+              <li><a href="#pricing" onClick={go('pricing')}>Engagements</a></li>
+              <li><a href="#about" onClick={go('about')}>About</a></li>
+            </ul>
+          </div>
+          <div>
+            <h5>Contact</h5>
+            <ul>
+              <li><a href="mailto:Dev@kaspaflow.co.uk">Dev@kaspaflow.co.uk</a></li>
+              <li><a href="#contact" onClick={go('contact')}>Arrange a consultation</a></li>
+            </ul>
+          </div>
+        </div>
+        <div className="footer-bottom">
+          <span>© 2026 Kaspaflow Ltd. Registered in England &amp; Wales.</span>
+          <div className="footer-legal">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+/* ── Cookie Banner ───────────────────────────── */
+const CookieBanner = () => {
+  const [accepted, setAccepted] = useState(() => {
+    try { return localStorage.getItem('kf-cookie') === '1'; } catch { return false; }
+  });
+  if (accepted) return null;
+  const accept = () => { try { localStorage.setItem('kf-cookie', '1'); } catch {} setAccepted(true); };
+  return (
+    <div className="cookie-banner" role="dialog" aria-label="Cookie consent">
+      <p className="cookie-text">
+        We use essential cookies only to ensure this site functions correctly. By continuing, you agree to our <a href="#">Cookie Policy</a>. As a UK-based firm, all data is governed under UK GDPR.
+      </p>
+      <div className="cookie-actions">
+        <button className="cookie-decline" onClick={accept}>Essential only</button>
+        <button className="cookie-accept" onClick={accept}>Accept &amp; continue</button>
+      </div>
+    </div>
+  );
+};
+
+/* ── Sticky Mobile CTA ───────────────────────── */
+const StickyMobileCta = ({ onJump }) => (
+  <div className="sticky-mobile-cta">
+    <a className="btn btn-primary" href="#contact" onClick={(e) => { e.preventDefault(); onJump('contact'); }}>
+      Arrange a consultation <Arrow />
+    </a>
+  </div>
+);
+
+/* ── Scroll Progress ─────────────────────────── */
+const ScrollProgress = () => {
+  const [pct, setPct] = useState(0);
+  useEffect(() => {
+    const update = () => {
+      const scrolled = window.scrollY;
+      const total = document.documentElement.scrollHeight - window.innerHeight;
+      setPct(total > 0 ? (scrolled / total) * 100 : 0);
+    };
+    window.addEventListener('scroll', update, { passive: true });
+    return () => window.removeEventListener('scroll', update);
+  }, []);
+  return <div className="scroll-progress" style={{ width: pct + '%' }} aria-hidden="true" />;
+};
+
+/* ── Diagrams ────────────────────────────────── */
+const HeroDiagram = ({ full }) => {
+  const [tick, setTick] = useState(0);
+  useEffect(() => {
+    const id = setInterval(() => setTick(t => (t + 1) % 6), 1800);
+    return () => clearInterval(id);
+  }, []);
+  const phase1 = [
+    { x: 60,  label: 'CV Screener',     sub: 'Reads, ranks, explains' },
+    { x: 320, label: 'Lead Qualifier',  sub: 'Scores inbound demand' },
+    { x: 580, label: 'Onboarding Bot',  sub: 'Automates client intake' },
+  ];
+  const phase2 = [
+    { x: 60,  label: 'Proposal Generator', sub: 'Drafts in your house style' },
+    { x: 320, label: 'Client Reporting',   sub: 'Generates weekly briefs' },
+    { x: 580, label: 'Email Automation',   sub: 'Outreach & follow-ups' },
+  ];
+  const HUB_X = 320, HUB_Y = 240;
+  const active = (i) => tick === i;
+  return (
+    <div style={{ width: '100%' }}>
+      <svg viewBox="0 0 800 480" style={{ width: '100%', height: 'auto', overflow: 'visible' }}>
+        <defs>
+          <pattern id="dots" width="14" height="14" patternUnits="userSpaceOnUse">
+            <circle cx="1" cy="1" r="0.7" fill="var(--ink-4)" opacity="0.25" />
+          </pattern>
+          <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+            <path d="M0,0 L10,5 L0,10 z" fill="var(--ink-3)" />
+          </marker>
+          <marker id="arrA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+            <path d="M0,0 L10,5 L0,10 z" fill="var(--accent)" />
+          </marker>
+        </defs>
+        <rect x="0" y="0" width="800" height="480" fill="url(#dots)" />
+        <line x1="40" y1="28" x2="760" y2="28" stroke="var(--hair)" />
+        <text x="40" y="22" fontSize="10" fill="var(--ink-3)" letterSpacing="2" fontFamily="var(--sans)">PHASE 01 — CORE</text>
+        <text x="760" y="22" fontSize="10" fill="var(--ink-3)" letterSpacing="2" fontFamily="var(--sans)" textAnchor="end">DEPLOYED IN WEEKS 1–4</text>
+        {phase1.map((m, i) => {
+          const a = active(i);
+          return (
+            <g key={i} transform={`translate(${m.x}, 50)`}>
+              <rect width="160" height="68" rx="4" fill="#fff" stroke={a ? "var(--accent)" : "var(--hair)"} strokeWidth={a ? 1.4 : 1} />
+              <text x="14" y="22" fontSize="9.5" fill="var(--ink-3)" letterSpacing="1.5" fontFamily="var(--sans)">{`MODULE 0${i+1}`}</text>
+              <text x="14" y="42" fontSize="14" fill="var(--ink)" fontFamily="var(--serif)" fontWeight="500">{m.label}</text>
+              <text x="14" y="58" fontSize="11" fill="var(--ink-3)" fontFamily="var(--sans)">{m.sub}</text>
+              <circle cx="148" cy="14" r="2.5" fill={a ? "var(--accent)" : "var(--ink-4)"}>
+                {a && <animate attributeName="r" values="2.5;5;2.5" dur="0.8s" />}
+              </circle>
+            </g>
+          );
+        })}
+        {phase1.map((m, i) => {
+          const a = active(i);
+          return (
+            <path key={i} d={`M${m.x+80} 118 C ${m.x+80} 180, ${HUB_X+80} 180, ${HUB_X+80} ${HUB_Y-4}`}
+              fill="none" stroke={a ? "var(--accent)" : "var(--hair)"} strokeWidth={a ? 1.4 : 1}
+              markerEnd={a ? "url(#arrA)" : "url(#arr)"} />
+          );
+        })}
+        <g transform={`translate(${HUB_X}, ${HUB_Y})`}>
+          <rect width="160" height="80" rx="6" fill="var(--accent)" />
+          <text x="80" y="22" textAnchor="middle" fontSize="9.5" fill="rgba(200,212,230,0.8)" letterSpacing="2" fontFamily="var(--sans)">THE HUB</text>
+          <text x="80" y="46" textAnchor="middle" fontSize="18" fill="#fff" fontFamily="var(--serif)" fontStyle="italic" fontWeight="300">Kaspaflow</text>
+          <text x="80" y="64" textAnchor="middle" fontSize="10.5" fill="rgba(200,212,230,0.7)" fontFamily="var(--sans)">shared data · single dashboard</text>
+          <rect x="-4" y="-4" width="168" height="88" rx="8" fill="none" stroke="var(--accent)" strokeWidth="1" opacity="0.4">
+            <animate attributeName="opacity" values="0.4;0;0.4" dur="2.4s" repeatCount="indefinite" />
+            <animate attributeName="stroke-width" values="1;2;1" dur="2.4s" repeatCount="indefinite" />
+          </rect>
+        </g>
+        <line x1="40" y1="358" x2="760" y2="358" stroke="var(--hair)" />
+        <text x="40" y="352" fontSize="10" fill="var(--ink-3)" letterSpacing="2" fontFamily="var(--sans)">PHASE 02 — EXPAND</text>
+        <text x="760" y="352" fontSize="10" fill="var(--ink-3)" letterSpacing="2" fontFamily="var(--sans)" textAnchor="end">DEPLOYED IN WEEKS 5–12</text>
+        {phase2.map((m, i) => {
+          const idx = i + 3;
+          const a = active(idx);
+          return (
+            <path key={i} d={`M${HUB_X+80} ${HUB_Y+84} C ${HUB_X+80} 320, ${m.x+80} 320, ${m.x+80} 380`}
+              fill="none" stroke={a ? "var(--accent)" : "var(--hair)"} strokeWidth={a ? 1.4 : 1}
+              markerEnd={a ? "url(#arrA)" : "url(#arr)"} />
+          );
+        })}
+        {phase2.map((m, i) => {
+          const idx = i + 3;
+          const a = active(idx);
+          return (
+            <g key={i} transform={`translate(${m.x}, 380)`}>
+              <rect width="160" height="68" rx="4" fill="#fff" stroke={a ? "var(--accent)" : "var(--hair)"} strokeWidth={a ? 1.4 : 1} />
+              <text x="14" y="22" fontSize="9.5" fill="var(--ink-3)" letterSpacing="1.5" fontFamily="var(--sans)">{`MODULE 0${idx+1}`}</text>
+              <text x="14" y="42" fontSize="14" fill="var(--ink)" fontFamily="var(--serif)" fontWeight="500">{m.label}</text>
+              <text x="14" y="58" fontSize="11" fill="var(--ink-3)" fontFamily="var(--sans)">{m.sub}</text>
+              <circle cx="148" cy="14" r="2.5" fill={a ? "var(--accent)" : "var(--ink-4)"}>
+                {a && <animate attributeName="r" values="2.5;5;2.5" dur="0.8s" />}
+              </circle>
+            </g>
+          );
+        })}
+        <text x="40" y="472" fontSize="10.5" fill="var(--ink-3)" letterSpacing="1.5" fontFamily="var(--sans)">FIG. 01 — THE KASPAFLOW ARCHITECTURE: A CONNECTED OPERATING SYSTEM</text>
+      </svg>
+    </div>
+  );
+};
+
+const ModuleDiagram = ({ kind }) => {
+  const w = 130, h = 64;
+  if (kind === 'cv') return (
+    <svg viewBox="0 0 140 70" style={{ width: w, height: h }}>
+      {[8, 22, 36].map((x, i) => (
+        <g key={i}>
+          <rect x={x} y="14" width="12" height="42" rx="1" fill="#fff" stroke="var(--hair)" />
+          <line x1={x+3} y1="22" x2={x+9} y2="22" stroke="var(--ink-4)" strokeWidth="0.8" />
+          <line x1={x+3} y1="28" x2={x+9} y2="28" stroke="var(--ink-4)" strokeWidth="0.8" />
+          <line x1={x+3} y1="34" x2={x+8} y2="34" stroke="var(--ink-4)" strokeWidth="0.8" />
+        </g>
+      ))}
+      <path d="M62 35 L82 35" stroke="var(--ink-3)" strokeWidth="1" markerEnd="url(#g-arrow)" />
+      <rect x="86" y="20" width="46" height="30" rx="2" fill="var(--ink)" />
+      <text x="109" y="32" textAnchor="middle" fontSize="8" fill="rgba(255,255,255,0.6)" fontFamily="var(--sans)" letterSpacing="1">SCORE</text>
+      <text x="109" y="44" textAnchor="middle" fontSize="13" fill="#fff" fontFamily="var(--serif)" fontStyle="italic">87</text>
+    </svg>
+  );
+  if (kind === 'lead') return (
+    <svg viewBox="0 0 140 70" style={{ width: w, height: h }}>
+      {[{y:14,t:'A'},{y:32,t:'B'},{y:50,t:'C'}].map((r,i) => (
+        <g key={i}>
+          <rect x="6" y={r.y} width="40" height="14" rx="2" fill="#fff" stroke="var(--hair)" />
+          <text x="14" y={r.y+10} fontSize="9" fill="var(--ink-3)" fontFamily="var(--sans)">Lead {r.t}</text>
+          <line x1="48" y1={r.y+7} x2="76" y2="35" stroke="var(--hair)" strokeWidth="0.8" />
+        </g>
+      ))}
+      <rect x="76" y="22" width="58" height="26" rx="2" fill="none" stroke="var(--accent)" />
+      <text x="105" y="32" textAnchor="middle" fontSize="8" fill="var(--accent)" letterSpacing="1.5" fontFamily="var(--sans)">QUALIFIED</text>
+      <text x="105" y="44" textAnchor="middle" fontSize="11" fill="var(--ink)" fontFamily="var(--serif)" fontStyle="italic">A · 92%</text>
+    </svg>
+  );
+  if (kind === 'onboard') return (
+    <svg viewBox="0 0 140 70" style={{ width: w, height: h }}>
+      {[8,38,68,98].map((x,i) => (
+        <g key={i}>
+          <circle cx={x+8} cy="35" r="5" fill={i===0?"var(--accent)":"#fff"} stroke={i===0?"var(--accent)":"var(--hair)"} />
+          {i<3 && <line x1={x+13} y1="35" x2={x+33} y2="35" stroke="var(--hair)" strokeDasharray="2 2" />}
+        </g>
+      ))}
+      {['Brief','Docs','SLA','Live'].map((t,i) => (
+        <text key={i} x={16+i*30} y="22" textAnchor="middle" fontSize="8" fill="var(--ink-3)" fontFamily="var(--sans)">{t}</text>
+      ))}
+    </svg>
+  );
+  if (kind === 'proposal') return (
+    <svg viewBox="0 0 140 70" style={{ width: w, height: h }}>
+      <rect x="6" y="8" width="60" height="54" rx="2" fill="none" stroke="var(--hair)" />
+      {[16,22,28,34,40,46,52].map((y,i) => (
+        <line key={i} x1="12" y1={y} x2={i%2?56:48} y2={y} stroke="var(--ink-4)" strokeWidth="0.8" opacity="0.6" />
+      ))}
+      <path d="M68 35 L82 35" stroke="var(--ink-3)" strokeWidth="1" markerEnd="url(#g-arrow)" />
+      <rect x="86" y="8" width="48" height="54" rx="2" fill="#fff" stroke="var(--accent)" />
+      <text x="110" y="20" textAnchor="middle" fontSize="7" fill="var(--accent)" letterSpacing="1.5" fontFamily="var(--sans)">DRAFT</text>
+      {[28,34,40,46,52].map((y,i) => (
+        <line key={i} x1="92" y1={y} x2="128" y2={y} stroke="var(--ink-2)" strokeWidth="0.8" />
+      ))}
+    </svg>
+  );
+  if (kind === 'reporting') return (
+    <svg viewBox="0 0 140 70" style={{ width: w, height: h }}>
+      <rect x="6" y="8" width="128" height="54" rx="2" fill="#fff" stroke="var(--hair)" />
+      <line x1="6" y1="20" x2="134" y2="20" stroke="var(--hair-2)" />
+      <text x="12" y="17" fontSize="7" fill="var(--ink-3)" letterSpacing="1.2" fontFamily="var(--sans)">WEEK 17 · CLIENT BRIEF</text>
+      <polyline points="14,52 30,46 46,48 62,38 78,40 94,32 110,34 128,26" fill="none" stroke="var(--accent)" strokeWidth="1.4" />
+      {[14,30,46,62,78,94,110,128].map((x,i) => {
+        const ys=[52,46,48,38,40,32,34,26];
+        return <circle key={i} cx={x} cy={ys[i]} r="1.5" fill="var(--accent)" />;
+      })}
+    </svg>
+  );
+  if (kind === 'email') return (
+    <svg viewBox="0 0 140 70" style={{ width: w, height: h }}>
+      <circle cx="14" cy="35" r="3" fill="var(--accent)" />
+      {[{x:32,y:20},{x:56,y:35},{x:80,y:50},{x:104,y:35}].map((p,i) => (
+        <g key={i}>
+          <line x1={i===0?17:[32,56,80,104][i-1]+16} y1={i===0?35:[20,35,50,35][i-1]+7} x2={p.x} y2={p.y+7} stroke="var(--hair)" />
+          <rect x={p.x} y={p.y} width="16" height="14" rx="1" fill="#fff" stroke="var(--hair)" />
+          <line x1={p.x+3} y1={p.y+5} x2={p.x+13} y2={p.y+5} stroke="var(--ink-4)" strokeWidth="0.7" />
+          <line x1={p.x+3} y1={p.y+9} x2={p.x+10} y2={p.y+9} stroke="var(--ink-4)" strokeWidth="0.7" />
+        </g>
+      ))}
+      <line x1="120" y1="42" x2="134" y2="42" stroke="var(--accent)" strokeDasharray="2 2" />
+    </svg>
+  );
+  return null;
+};
+
+/* ── App ─────────────────────────────────────── */
+const App = () => {
+  // Smooth scroll with easing
+  const jump = useCallback((id) => {
+    const offset = 70;
+    const target = id === 'top' ? null : document.getElementById(id);
+    const targetY = target ? target.getBoundingClientRect().top + window.scrollY - offset : 0;
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduced) { window.scrollTo(0, targetY); return; }
+    const startY = window.scrollY;
+    const dist = targetY - startY;
+    if (Math.abs(dist) < 2) return;
+    const duration = Math.min(1100, 480 + Math.abs(dist) * 0.35);
+    const start = performance.now();
+    const ease = t => t < 0.5 ? 4*t*t*t : 1 - Math.pow(-2*t+2, 3)/2;
+    const step = now => {
+      const t = Math.min(1, (now - start) / duration);
+      window.scrollTo(0, startY + dist * ease(t));
+      if (t < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }, []);
+
+  // Scroll reveal
+  useEffect(() => {
+    const els = document.querySelectorAll('.reveal');
+    if (!els.length) return;
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduced) { els.forEach(el => el.classList.add('visible')); return; }
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    els.forEach(el => obs.observe(el));
+    return () => obs.disconnect();
+  }, []);
+
+  return (
+    <>
+      <ScrollProgress />
+      <Nav onJump={jump} />
+      <main id="main">
+        <Hero onJump={jump} />
+        <Trust />
+        <Architecture />
+        <ModulesSection />
+        <Methodology />
+        <Pricing onJump={jump} />
+        <About />
+        <Contact />
+      </main>
+      <Footer onJump={jump} />
+      <StickyMobileCta onJump={jump} />
+      <CookieBanner />
+    </>
+  );
+};
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body>
 </html>
